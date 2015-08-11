@@ -14,10 +14,6 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-# Packages #
-############
-*.zip
-
 # SublimeText #
 ###############
 *.sublime-project

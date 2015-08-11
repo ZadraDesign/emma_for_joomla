@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="1.6">
+	<name>MyEmma Package</name>
+	<author>Zadra Design</author>
+	<creationDate>2015-08-10</creationDate>
+  <copyright>Copyright (C) 2015 Zadra Design. All rights reserved.</copyright>
+  <license>GNU General Public License version 3; see LICENSE.txt</license>
+	<packagename>emma</packagename>
+	<version>1.0.0</version>
+	<url>http://zadradesign.com</url>
+	<packager>Zadra Design</packager>
+	<packagerurl>http://zadradesign.com/</packagerurl>
+	<description>A package that adds the My Emma library to Joomla!. You must configure the Emma plugin before using this package.</description>
+	<files folder="packages">
+   	<file type="plugin" id="plg_system_emma">plg_system_emma.zip</file>
+   	<file type="library">lib_emma.zip</file>
+ 	</files>
+ 	<updateservers>
+ 		<server type="collection" priority="1" name="Emma">http://zadradesign.com/extensions/emma/updates/emma-list.xml</server>
+ 	</updateservers>
+</extension>

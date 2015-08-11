@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" version="3.0" method="upgrade" group="system">
+    <name>plg_system_emma</name>
+    <creationDate>2015-08-07</creationDate>
+    <copyright>Copyright (C) 2015 Zadra Design. All rights reserved.</copyright>
+    <license>GNU General Public License version 3; see LICENSE.txt</license>
+    <author>Zadra Design</author>
+    <authorEmail>zachary@zadradesign.com</authorEmail>
+    <authorUrl>http://zadradesign.com</authorUrl>
+    <version>1.0.0</version>
+    <description>PLG_SYSTEM_EMMA_XML_DESCRIPTION</description>
+    <files>
+        <filename>index.html</filename>
+        <filename>script.php</filename>
+        <filename plugin="emma">emma.php</filename>
+        <folder>language</folder>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_emma.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_emma.sys.ini</language>
+    </languages>
+    <scriptfile>script.php</scriptfile>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <!-- account_id -->
+                <field
+                    class="text"
+                    description="PLG_EMMA_FOR_JOOMLA_FIELD_ACCOUNT_ID_DESC"
+                    label="PLG_EMMA_FOR_JOOMLA_FIELD_ACCOUNT_ID_LBL"
+                    name="account_id"
+                    type="text" />
+
+                <!-- pub_api_key -->
+                <field
+                    class="text"
+                    description="PLG_EMMA_FOR_JOOMLA_FIELD_PUB_API_KEY_DESC"
+                    label="PLG_EMMA_FOR_JOOMLA_FIELD_PUB_API_KEY_LBL"
+                    name="pub_api_key"
+                    type="text" />
+
+                <!-- pri_api_key -->
+                <field
+                    class="text"
+                    description="PLG_EMMA_FOR_JOOMLA_FIELD_PRI_API_KEY_DESC"
+                    label="PLG_EMMA_FOR_JOOMLA_FIELD_PRI_API_KEY_LBL"
+                    name="pri_api_key"
+                    type="text" />
+
+                <!-- debug -->
+                <field
+                    class="btn-group"
+                    default="0"
+                    description="PLG_EMMA_FOR_JOOMLA_FIELD_DEBUG_DESC"
+                    id="debug"
+                    label="PLG_EMMA_FOR_JOOMLA_FIELD_DEBUG_LBL"
+                    name="debug"
+                    type="radio">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

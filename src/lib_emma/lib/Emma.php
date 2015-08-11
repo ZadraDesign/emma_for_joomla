@@ -10,7 +10,7 @@
 	 * @author    Dennis Monsewicz <dennismonsewicz@gmail.com>
 	 * @copyright 2013 Dennis Monsewicz <dennismonsewicz@gmail.com>
 	 * @license   http://www.opensource.org/licenses/mit-license.php MIT
-	 * @link      https://github.com/myemma/emma-wrapper-php
+	 * @link      https://github.com/myemma/EmmaPHP
 	 */
 	class Emma {
 		/**
@@ -46,21 +46,26 @@
 		function __construct() {
 
 			// get the plugin settings
-			$account_id = $this->params->get('account_id', 0);
-			$pub_api_key = $this->params->get('pub_api_key', '');
-			$pri_api_key = $this->params->get('pri_api_key', '');
-			$debug = $this->params->get('debug', 0);
-
-			if(empty($account_id))
+			// set settings from the plugin
+			$plugin = JPluginHelper::getPlugin('system','emma');
+			if(!$plugin){
 				throw new Emma_Missing_Account_Id();
-			
-			if(empty($pub_api_key) || empty($pri_api_key))
+				return;
+			}
+
+			$params = new JRegistry($plugin->params);
+			$this->_account_id = $params->get('account_id');
+			$this->_pub_key = $params->get('pub_api_key');
+			$this->_priv_key = $params->get('pri_api_key');
+			$this->_debug = $params->get('debug');
+
+			if(empty($this->_account_id)){
+				throw new Emma_Missing_Account_Id();
+			}
+
+			if(empty($this->_pub_key) || empty($this->_priv_key)){
 				throw new Emma_Missing_Auth_For_Request();
-			
-			$this->_account_id = $account_id;
-			$this->_pub_key = $pub_api_key;
-			$this->_priv_key = $pri_api_key;
-			$this->_debug = $debug;
+			}
 		}
 		
 		/** 

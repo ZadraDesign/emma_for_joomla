@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="library" method="upgrade">
+	<name>LIB_EMMA</name>
+	<libraryname>emma</libraryname>
+	<author>Zadra Design</author>
+	<creationDate>August 2015</creationDate>
+	<copyright>Copyright (C) 2015 Zadra Design. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later.</license>
+	<authorEmail>zachary@zadradesign.com</authorEmail>
+	<authorUrl>https://zadradesign.com</authorUrl>
+	<version>1.0.0</version>
+	<description>LIB_EMMA_DESCRIPTION</description>
+
+	<files>
+		<folder>lib</folder>
+		<file>index.html</file>
+		<file>init.php</file>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.lib_emma.ini</language>
+		<language tag="en-GB">en-GB/en-GB.lib_emma.sys.ini</language>
+	</languages>
+</extension>
